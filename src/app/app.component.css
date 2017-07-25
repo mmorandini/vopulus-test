@@ -2,13 +2,10 @@
 	border:5px solid #80c4c0;
 	margin: 10px auto;
 }
-section{
-	padding: 20px;
-}
 .nav-link{
-	display: inline;
+	float: right;
 }
 
-.nav-item{
-	display: inline;
+section{
+	padding: 60px 50px;
 }

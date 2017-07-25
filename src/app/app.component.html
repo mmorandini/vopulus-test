@@ -1,23 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>Hello World!</h1>
-  <nav class="navbar">
-    <div class="nav-logo nav-item">NAVBAR LOGO</div>
-    <ul class="nav-links nav-item">
-      <li class="nav-link" (click)="changeSrc0()">EMPOWERING</li>
-      <li class="nav-link" (click)="changeSrc1()">DISRUPTING</li>
-      <li class="nav-link" (click)="changeSrc2()">CONNECTING</li>
-    </ul>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      
+      <ul class="nav nav-tabs">
+        <li class="nav-logo"><a href="#">NAVBAR LOGO</a></li>
+        <li class="nav-link"><a (click)="this.firstVideoIsOn = true" (click)="changeSrc()">EMPOWERING</a></li>
+        <li class="nav-link"><a (click)="this.secondVideoIsOn = true" (click)="this.changeSrc()">DISRUPTING</a></li>
+        <li class="nav-link"><a (click)="this.thirdVideoIsOn = true" (click)="this.changeSrc()">CONNECTING</a></li>
+      </ul>
+    </div>
   </nav>
-  <section style="background-color: #dbf0ef; height: 80vh">
+  
+
+  <section style="background-color: #dbf0ef;">
     <video id="my-player"
-    class="video-js"
+    class="video-js vjs-default-skin vjs-big-play-centered"
     controls 
     preload="auto"
     poster="//vjs.zencdn.net/v/oceans.png"
-    data-setup='{}'>
-    <source src="" 
+    data-setup='{"fluid": true}'>
+    <source src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" 
     type="application/x-mpegURL">
     </video>
   </section>
+
 </div>
