@@ -2,10 +2,23 @@
 	border:5px solid #80c4c0;
 	margin: 10px auto;
 }
-.nav-link{
+.logo{
+	width: 300px;
+}
+.nav-link-group{
 	float: right;
 }
-
+.navbar-nav > li{
+	margin: 0 15px;
+}
+.navbar-nav > li > a{
+	color: #80c4c0;
+	font-size: 20px;
+	font-weight: bold;
+}
+.navbar-nav > li > a:hover{
+	opacity: 0.8;
+}
 section{
-	padding: 60px 50px;
+	padding: 80px 50px;
 }
