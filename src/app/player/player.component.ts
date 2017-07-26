@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { sources } from '../mock-videos';
+import { sources } from '../videos-data';
 
 
 declare let videojs;
@@ -32,6 +32,7 @@ export class PlayerComponent {
 			src = sources[2];
 			type = 'video/mp4';
 		} else return;
+
 		myPlayer.src({
 			src: src,
 			type: type

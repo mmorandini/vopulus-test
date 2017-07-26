@@ -4,7 +4,8 @@ declare let videojs;
 @Injectable() 
 
 export class TimerService {
-	startTimer(){
+	
+    startTimer(){
 		let myPlayer = videojs('my-player');
 		myPlayer.ready(function(){
           this.on("timeupdate", function(){ 
