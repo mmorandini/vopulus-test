@@ -15,6 +15,3 @@
 .navbar-nav > li > a:hover{
 	opacity: 0.8;
 }
-#current_time{
-	display: inline-block;
-}
