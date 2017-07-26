@@ -3,8 +3,6 @@ declare let videojs;
 
 @Injectable() 
 
-
-
 export class TimerService {
 	startTimer(){
 		let myPlayer = videojs('my-player');
