@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Headers} from '@angular/http';
-
 declare let videojs;
 
 @Component({
@@ -10,10 +8,6 @@ declare let videojs;
 })
 
 export class AppComponent {
-	title;
-
-	constructor(){}
-
 	firstVideoIsOn = false;
 	secondVideoIsOn = false;
 	thirdVideoIsOn = false;
@@ -59,4 +53,6 @@ export class AppComponent {
 		this.secondVideoIsOn = false;
 		this.thirdVideoIsOn = false;
 	}
+
+	constructor(){}
 }
