@@ -9,38 +9,18 @@ declare let videojs;
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css']
 })
+
 export class PlayerComponent {
-
-  	constructor() { }
-
-  	firstVideoIsOn = false;
-  	secondVideoIsOn = false;
-  	thirdVideoIsOn = false;
-  
-  	changeSrc(){
-		let myPlayer = videojs('my-player');
-		let src;
+	constructor() { }
+  	changeSrc(index){
+		const myPlayer = videojs('my-player');
+		const src = sources[index];
 		let type;
-
-		if (this.firstVideoIsOn === true){
-			src  = sources[0];
-			type = 'application/x-mpegURL';
-		} else if (this.secondVideoIsOn === true){
-			src = sources[1];
-			type = 'video/mp4';
-		} else if (this.thirdVideoIsOn === true){
-			src = sources[2];
-			type = 'video/mp4';
-		} else return;
-
+		(index === 0) ? type = 'application/x-mpegURL' : type = 'video/mp4';
 		myPlayer.src({
 			src: src,
 			type: type
 		});
-		
 		myPlayer.play();
-		this.firstVideoIsOn = false;
-		this.secondVideoIsOn = false;
-		this.thirdVideoIsOn = false;
 	}
 }
